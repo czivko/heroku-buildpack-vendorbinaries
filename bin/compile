@@ -14,8 +14,11 @@ if [ ! -s $1/.vendor_urls ]; then
 fi
 
 cd $1
+pwd
 
 while read url; do
+  echo " start download"
   echo Vendoring $url | indent
   curl -L --silent $url | tar xz
+  echo " end download"
 done < .vendor_urls
