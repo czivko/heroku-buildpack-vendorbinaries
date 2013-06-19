@@ -15,6 +15,7 @@ fi
 
 cd $1
 pwd
+ls
 
 while read url; do
   echo " start download"
