@@ -15,7 +15,9 @@ fi
 
 cd $1
 pwd
-ls
+ls -a
+cd vendor
+ls -a
 
 while read url; do
   echo " start download"
@@ -23,3 +25,5 @@ while read url; do
   curl -L --silent $url | tar xz
   echo " end download"
 done < .vendor_urls
+
+ls -a
