@@ -16,8 +16,6 @@ fi
 cd $1
 pwd
 ls -a
-cd vendor
-ls -a
 
 while read url; do
   echo " start download"
